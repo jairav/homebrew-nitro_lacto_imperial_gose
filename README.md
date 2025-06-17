@@ -1,18 +1,14 @@
 # One Beer to Rule Them All
 
-This repository is a custom Homebrew tap that installs applications and their
-configuration. The goal is to keep all workstation setup in a single tap. At
-the moment only Warp is supported.
+This repository is a Homebrew tap that installs numerous bioinformatics-type 
+applications and their configuration. The goal is to keep all workstation 
+setup in a single tap. At the moment only Warp and ZSH/Unix Tools are supported.
 
 ## Usage
 
 ```bash
-brew tap username/nitro_lacto_imperial_gose https://github.com/username/nitro_lacto_imperial_gose
-brew install --cask warp
+brew install jairav/nitro_lacto_imperial_gose
 ```
-
-Installing the cask will copy the configuration files from `config/warp` into
-`~/Library/Application Support/Warp` after Warp is installed.
 
 # Nitro Lacto Imperial Gose: Team Development Environment
 
