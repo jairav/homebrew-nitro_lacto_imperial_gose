@@ -6,9 +6,18 @@ setup in a single tap. At the moment only Warp and ZSH/Unix Tools are supported.
 
 ## Usage
 
-```bash
-brew install jairav/nitro_lacto_imperial_gose
+### 1. Tap this repository (required for Homebrew to find the cask):
+```sh
+brew tap jairav/nitro_lacto_imperial_gose
 ```
+
+### 2. Install all dependencies and configs:
+```sh
+brew bundle install
+```
+This will install all CLI tools, GUI apps, and symlink dotfiles/configs in one go.
+
+---
 
 # Nitro Lacto Imperial Gose: Team Development Environment
 
@@ -19,22 +28,6 @@ This repository provides a fully self-contained, one-command setup for your team
 - Installs all required CLI tools and GUI applications via Homebrew using a Brewfile.
 - Installs and symlinks team-standard dotfiles and configuration files (like `.zshrc` and `lsd` config) to the user's home directory using a custom cask.
 - Enables new team members to get a consistent, ready-to-use environment with a single command.
-
-## How to Use
-1. **Clone this repository:**
-   ```sh
-   git clone https://github.com/your-org/nitro_lacto_imperial_gose.git
-   cd nitro_lacto_imperial_gose
-   ```
-2. **Tap this repo as a Homebrew tap:**
-   ```sh
-   brew tap your-org/nitro_lacto_imperial_gose
-   ```
-3. **Install all dependencies and configs:**
-   ```sh
-   brew bundle install
-   ```
-   This will install all CLI tools, GUI apps, and symlink dotfiles/configs in one go.
 
 ## ⚠️ Note on Homebrew Best Practices
 This repository intentionally goes outside of recommended Homebrew cask/tap rules:
