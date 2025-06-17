@@ -13,7 +13,7 @@ brew tap jairav/nitro_lacto_imperial_gose
 
 ### 2. Install all dependencies and configs:
 ```sh
-brew bundle install
+brew bundle --file=https://raw.githubusercontent.com/jairav/homebrew-nitro_lacto_imperial_gose/refs/heads/main/Brewfile
 ```
 This will install all CLI tools, GUI apps, and symlink dotfiles/configs in one go.
 
