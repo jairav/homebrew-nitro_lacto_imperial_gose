@@ -16,7 +16,7 @@ cask "warp" do
     config_source = File.expand_path("../config/warp", __dir__)
     config_target = File.expand_path(File.join(Dir.home, "Library", "Application Support", "Warp"))
     FileUtils.mkdir_p(config_target)
-    FileUtils.cp_r Dir.glob(File.join(config_source, "{*,.*}"), base: config_source).reject { |f| [".", ".."].include?(File.basename(f)) }, config_target, verbose: true
+    FileUtils.copy_entry(config_source, config_target, preserve: true, remove_destination: false)
   end
 
   zap trash: [
