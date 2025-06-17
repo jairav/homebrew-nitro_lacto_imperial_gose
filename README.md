@@ -1,8 +1,8 @@
 # One Beer to Rule Them All
 
-This repository is a custom Homebrew tap that installs applications and their
-configuration. The goal is to keep all workstation setup in a single tap. At
-the moment only Warp and ZSH/Unix Tools are supported.
+This repository is a Homebrew tap that installs numerous bioinformatics-type 
+applications and their configuration. The goal is to keep all workstation 
+setup in a single tap. At the moment only Warp and ZSH/Unix Tools are supported.
 
 ## Usage
 
