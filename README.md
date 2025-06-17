@@ -1,5 +1,21 @@
-# homebrew-testjairav : warp+lsd+bat+zsh tap
+# One Beer to Rule Them All
 
-- initially working on warp and zsh + plugins
-- eventually will work in Python, Quarto and R
-- will explore vscode+extensions, rstudio and positron
+This Homebrew Tap will update all of the following:
+- Warp
+  - Settings
+  - Fonts
+  - ZSH other links
+- ZSH
+  - .zshrc
+  - (lsd)[https://github.com/lsd-rs/lsd] + config file
+  - (bat)[https://github.com/sharkdp/bat]
+  - zsh package management (none as yet)
+- R + Packages
+- Python + Packages
+- Quarto + Extensions
+- VS Code settings.json
+
+Eventually:
+- RStudio
+- VS Code
+- Positron
