@@ -16,7 +16,12 @@ cask "warp" do
     config_source = File.expand_path("../config/warp", __dir__)
     config_target = File.expand_path(File.join(Dir.home, "Library", "Application Support", "Warp"))
     FileUtils.mkdir_p(config_target)
-    FileUtils.copy_entry(config_source, config_target, preserve: true, remove_destination: false)
+    begin
+      FileUtils.copy_entry(config_source, config_target, preserve: true, remove_destination: false)
+    rescue => e
+      puts "Error copying configuration files from #{config_source} to #{config_target}: #{e.message}"
+      raise
+    end
   end
 
   zap trash: [
