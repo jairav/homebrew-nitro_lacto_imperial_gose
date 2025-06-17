@@ -1,0 +1,36 @@
+# From: https://ianyepan.github.io/posts/moving-away-from-ohmyzsh/
+# No Duplicate history
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=5000
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+# Case Insensitive Auto-Completion
+autoload -U compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# Command line editor vim key bindings
+# bindkey -v
+
+# LSD
+# brew tap homebrew/cask-fonts
+# brew install --cask font-hack-nerd-font
+# brew install lsd
+alias ls='lsd --long --tree'
+
+# Install Bat. bat > cat
+# brew install bat
+export BAT_THEME='gruvbox-dark'
+alias cat='bat --paging=never'
+
+# NEEDS TO BE AT BOTTOM
+# Zsh Syntax Highlighting
+# `brew install zsh-syntax-highlighting`
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
