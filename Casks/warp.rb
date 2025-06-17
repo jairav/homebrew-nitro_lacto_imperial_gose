@@ -19,7 +19,7 @@ cask "warp" do
     begin
       FileUtils.copy_entry(config_source, config_target, preserve: true, remove_destination: false)
     rescue => e
-      puts "Error copying configuration files from #{config_source} to #{config_target}: #{e.message}"
+      onoe "Error copying configuration files from #{config_source} to #{config_target}: #{e.message}"
       raise
     end
   end
