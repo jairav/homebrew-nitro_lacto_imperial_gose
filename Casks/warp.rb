@@ -14,7 +14,7 @@ cask "warp" do
   postflight do
     require "fileutils"
     config_source = File.expand_path("../config/warp", __dir__)
-    config_target = File.expand_path("~/Library/Application Support/Warp", ENV["HOME"])
+    config_target = File.expand_path(File.join(Dir.home, "Library", "Application Support", "Warp"))
     FileUtils.mkdir_p(config_target)
     FileUtils.cp_r Dir[File.join(config_source, "*")], config_target, verbose: true
   end
