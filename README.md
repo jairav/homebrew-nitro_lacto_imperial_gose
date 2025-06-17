@@ -16,52 +16,44 @@ Installing the cask will copy the configuration files from `config/warp` into
 
 # Nitro Lacto Imperial Gose: Team Development Environment
 
-## Quick Start
+## Purpose
+This repository provides a fully self-contained, one-command setup for your team's macOS development environment. It installs CLI tools, GUI apps, and configures dotfiles automatically using Homebrew's Brewfile and a custom cask.
 
+## What This Repo Does
+- Installs all required CLI tools and GUI applications via Homebrew using a Brewfile.
+- Installs and symlinks team-standard dotfiles and configuration files (like `.zshrc` and `lsd` config) to the user's home directory using a custom cask.
+- Enables new team members to get a consistent, ready-to-use environment with a single command.
+
+## How to Use
 1. **Clone this repository:**
    ```sh
    git clone https://github.com/your-org/nitro_lacto_imperial_gose.git
    cd nitro_lacto_imperial_gose
    ```
-
 2. **Tap this repo as a Homebrew tap:**
    ```sh
    brew tap your-org/nitro_lacto_imperial_gose
    ```
-
-3. **Install all CLI and GUI dependencies:**
+3. **Install all dependencies and configs:**
    ```sh
    brew bundle install
    ```
+   This will install all CLI tools, GUI apps, and symlink dotfiles/configs in one go.
 
-4. **Install dotfiles and configs:**
-   ```sh
-   brew install --cask dotfiles
-   ```
+## ⚠️ Note on Homebrew Best Practices
+This repository intentionally goes outside of recommended Homebrew cask/tap rules:
+- The custom cask (`nitro-lacto-imperial-gose`) is used to symlink dotfiles and configs directly into the user's home directory, which is not standard or recommended for public Homebrew taps.
+- The cask fetches the latest state of the `main` branch, not a tagged release, so users always get the most recent version.
+- This approach is designed for internal/team use only, not for public Homebrew distribution.
+
+## Why This Approach?
+- **One-command setup:** New team members can get a fully configured environment with a single command.
+- **Consistency:** Ensures everyone uses the same tools, apps, and configs.
+- **Simplicity:** No manual copying or running of setup scripts required.
+
+## Contributing
+- Update the Brewfile, dotfiles, or configs as needed.
+- Document any changes in this README.
 
 ---
-
-- All dependencies and configs are contained in this repository.
-- Update the Brewfile and config/ directory as your team’s needs grow.
-- No meta-formula is needed; everything is managed by Brewfile and the dotfiles cask.
-
-## Managed Applications
-
-- Warp
-  - Settings
-  - Fonts
-  - ZSH other links
-- ZSH
-  - .zshrc
-  - [lsd](https://github.com/lsd-rs/lsd) + config file
-  - [bat](https://github.com/sharkdp/bat)
-  - zsh package management (none as yet)
-- R + Packages
-- Python + Packages
-- Quarto + Extensions
-- VS Code settings.json
-
-### Eventually
-- RStudio
-- VS Code
-- Positron
+This repository is for internal use. For public Homebrew taps, follow the official Homebrew guidelines.
