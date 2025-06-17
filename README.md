@@ -23,12 +23,12 @@ This repository provides a fully self-contained, one-command setup for your team
 ## How to Use
 1. **Clone this repository:**
    ```sh
-   git clone https://github.com/your-org/nitro_lacto_imperial_gose.git
+   git clone https://github.com/jairav/nitro_lacto_imperial_gose.git
    cd nitro_lacto_imperial_gose
    ```
 2. **Tap this repo as a Homebrew tap:**
    ```sh
-   brew tap your-org/nitro_lacto_imperial_gose
+   brew tap jairav/nitro_lacto_imperial_gose
    ```
 3. **Install all dependencies and configs:**
    ```sh
