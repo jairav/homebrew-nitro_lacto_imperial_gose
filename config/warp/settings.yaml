@@ -1,0 +1,4 @@
+# Default Warp configuration
+# Replace these with your own settings
+window:
+  opacity: 0.95
